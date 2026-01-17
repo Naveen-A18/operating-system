@@ -1,10 +1,9 @@
 #include <stdio.h>
 int main() {
-// P0, P1, P2, P3, P4 are the Process names here
 int n, m, i, j, k;
-n = 5; // Number of processes
-m = 3; // Number of resources
-int alloc[5][3] = { { 0, 1, 0 }, // P0 // Allocation Matrix
+n = 5; 
+m = 3; 
+int alloc[5][3] = { { 0, 1, 0 }, 
 { 2, 0, 0 }, // P1
 { 3, 0, 2 }, // P2
 { 2, 1, 1 }, // P3
@@ -63,3 +62,4 @@ printf(" P%d", ans[n - 1]);
 }
 return (0);
 }
+
