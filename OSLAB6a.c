@@ -52,5 +52,5 @@ int n;
         worstFit(blocks, m, processSize);
     }
 
-    return ;
+    return 0;
 }
