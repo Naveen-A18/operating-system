@@ -37,3 +37,20 @@ void worstFit(struct MemoryBlock blocks[], int m, int processSize)
         printf("Cannot allocate the process with size %d\n", processSize);
     }
 }
+int n;
+    printf("Enter the number of processes: ");
+    scanf("%d", &n);
+
+    // Allocate each process using Worst Fit
+    for (int i = 0; i < n; i++)
+    {
+        int processSize;
+
+        printf("Enter the size of process %d: ", i + 1);
+        scanf("%d", &processSize);
+
+        worstFit(blocks, m, processSize);
+    }
+
+    return ;
+}
