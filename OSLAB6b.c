@@ -45,15 +45,5 @@ int main() {
         blocks[i].allocated = 0;
     }
 
-    printf("Enter number of processes: ");
-    scanf("%d", &n);
-
-    for (int i = 0; i < n; i++) {
-        int processSize;
-        printf("Enter size of process %d: ", i + 1);
-        scanf("%d", &processSize);
-        bestFit(blocks, m, processSize);
-    }
-
-    return 0;
+  
 }
