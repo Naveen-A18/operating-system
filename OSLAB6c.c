@@ -50,5 +50,5 @@ int main() {
         firstFit(blocks, m, processSize);
     }
 
-    
+    return 0;
 }
