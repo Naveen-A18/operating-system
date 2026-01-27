@@ -40,3 +40,7 @@ void bestFit() {
     }
 }
 
+int main() {
+    bestFit();
+    return 0;
+} 
