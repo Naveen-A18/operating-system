@@ -52,7 +52,21 @@ void displayDirectoryContents(const Directory* directory) {
                directory->files[i].size);
     }
 }
+int main() {
+    Directory directory;
+    directory.num_files = 0;
 
+    // Create and add files
+    File file1 = createFile("File1.txt", 100, "This is the content of File1.");
+    addFileToDirectory(&directory, file1);
+
+    File file2 = createFile("File2.txt", 200, "Content of File2 goes here.");
+    addFileToDirectory(&directory, file2);
+
+    // Display directory
+    displayDirectoryContents(&directory);
+
+    return 0;
 
 }
 
