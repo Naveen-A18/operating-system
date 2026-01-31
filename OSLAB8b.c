@@ -75,4 +75,22 @@ void createFile(char dir_name[], char file_name[]) {
 
     printf("Error: Directory not found.\n");
 }
+// List files in directory
+void listFiles(char dir_name[]) {
 
+    for (int i = 0; i < num_dirs; i++) {
+
+        if (strcmp(directories[i].name, dir_name) == 0) {
+
+            printf("\nFiles in directory %s:\n", dir_name);
+
+            for (int j = 0; j < directories[i].num_files; j++) {
+                printf("%s\n", directories[i].files[j].name);
+            }
+
+            return;
+        }
+    }
+
+    printf("Error: Directory not found.\n");
+}
