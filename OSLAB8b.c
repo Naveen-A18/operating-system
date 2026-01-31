@@ -51,3 +51,28 @@ void createDirectory(char parent_name[], char dir_name[]) {
 
     printf("Error: Parent directory not found.\n");
 }
+// Create file inside a directory
+void createFile(char dir_name[], char file_name[]) {
+
+    for (int i = 0; i < num_dirs; i++) {
+
+        if (strcmp(directories[i].name, dir_name) == 0) {
+
+            if (directories[i].num_files >= MAX_FILES) {
+                printf("Error: Maximum files reached in %s.\n", dir_name);
+                return;
+            }
+
+            strcpy(directories[i].files[directories[i].num_files].name, file_name);
+            directories[i].files[directories[i].num_files].content[0] = '\0';
+
+            directories[i].num_files++;
+
+            printf("File %s created in %s.\n", file_name, dir_name);
+            return;
+        }
+    }
+
+    printf("Error: Directory not found.\n");
+}
+
