@@ -94,3 +94,26 @@ void listFiles(char dir_name[]) {
 
     printf("Error: Directory not found.\n");
 }
+// Main function
+int main() {
+
+    // Create root directory
+    strcpy(directories[0].name, "root");
+    directories[0].num_files = 0;
+    num_dirs++;
+
+    // Create sub-directories
+    createDirectory("root", "docs");
+    createDirectory("root", "images");
+
+    // Create files
+    createFile("docs", "document1.txt");
+    createFile("docs", "document2.txt");
+    createFile("images", "image1.jpg");
+
+    // List files
+    listFiles("docs");
+    listFiles("images");
+
+    return 0;
+}
