@@ -38,3 +38,20 @@ int main()
                 queue1[i] = queue1[j];
                 queue1[j] = temp;
             }
+for(i = 0; i < temp2-1; i++)
+        for(j = i+1; j < temp2; j++)
+            if(queue2[i] < queue2[j])
+            {
+                temp = queue2[i];
+                queue2[i] = queue2[j];
+                queue2[j] = temp;
+            }
+
+    queue[0] = head;
+    j = 1;
+
+    for(i = 0; i < temp1; i++)
+        queue[j++] = queue1[i];
+
+    queue[j++] = max;
+
