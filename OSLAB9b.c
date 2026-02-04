@@ -54,4 +54,22 @@ for(i = 0; i < temp2-1; i++)
         queue[j++] = queue1[i];
 
     queue[j++] = max;
+ for(i = 0; i < temp2; i++)
+        queue[j++] = queue2[i];
 
+    printf("\nSeek Sequence:\n");
+
+    for(i = 0; i < j-1; i++)
+    {
+        diff = abs(queue[i+1] - queue[i]);
+        seek += diff;
+        printf("Move from %d to %d with seek %d\n", queue[i], queue[i+1], diff);
+    }
+
+    printf("\nTotal Seek Time = %d", seek);
+
+    avg = (float)seek / n;
+    printf("\nAverage Seek Time = %.2f\n", avg);
+
+    return 0;
+}
