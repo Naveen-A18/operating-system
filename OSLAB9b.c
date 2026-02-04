@@ -22,3 +22,19 @@ int main()
     printf("Enter disk requests:\n");
     for(i = 0; i < n; i++)
         scanf("%d", &queue[i]);
+   for(i = 0; i < n; i++)
+    {
+        if(queue[i] >= head)
+            queue1[temp1++] = queue[i];
+        else
+            queue2[temp2++] = queue[i];
+    }
+
+    for(i = 0; i < temp1-1; i++)
+        for(j = i+1; j < temp1; j++)
+            if(queue1[i] > queue1[j])
+            {
+                temp = queue1[i];
+                queue1[i] = queue1[j];
+                queue1[j] = temp;
+            }
