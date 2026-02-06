@@ -1,7 +1,7 @@
 #include <stdio.h>              
 #include <stdlib.h>
 
-int main()
+int main()                 
 {
     int n, head, max;
     int queue[20], queue1[20], queue2[20];
