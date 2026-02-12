@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h>   
 
 int main() {
     int f[50], i, st, len, j, c, k, a;
